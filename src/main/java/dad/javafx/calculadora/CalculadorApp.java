@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class CalculadorApp extends Application {
+	
 	private CalculadoraController controller;
 	
 	@Override

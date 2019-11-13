@@ -14,6 +14,11 @@ import javafx.scene.layout.GridPane;
 
 public class CalculadoraController implements Initializable {
 
+	// model
+	Calculadora calc = new Calculadora();
+	
+	
+	// view
 	@FXML
 	private GridPane girdpane;
 
@@ -74,96 +79,6 @@ public class CalculadoraController implements Initializable {
 	@FXML
 	private TextField operacionesButton;
 
-	@FXML
-	void onActioncButton(ActionEvent event) {
-		
-	}
-
-	@FXML
-	void onActionceButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActionceroButton(ActionEvent event) {
-		operacionesButton.textProperty().bind(ceroButton.textProperty());
-	}
-
-	@FXML
-	void onActioncincoButton(ActionEvent event) {
-		operacionesButton.textProperty().bind(cincoButton.textProperty());
-	}
-
-	@FXML
-	void onActioncomaButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActioncuatroButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActiondivButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActiondosButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActionmultipliqButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActionnueveButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActionochoButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActionrestaButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActionresultButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActionseisButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActionsieteButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActionsumaButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActiontresButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void onActionunoButton(ActionEvent event) {
-
-	}
-
 	public CalculadoraController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CalculadoraView.fxml"));
 		loader.setController(this);
@@ -173,10 +88,100 @@ public class CalculadoraController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// bindeos
-		
+
 	}
 
 	public GridPane getView() {
 		return girdpane;
+	}
+
+	@FXML
+	void onActioncButton(ActionEvent event) {
+		calc.borrar();
+	}
+
+	@FXML
+	void onActionceButton(ActionEvent event) {
+		calc.borrarTodo();
+	}
+
+	@FXML
+	void onActionceroButton(ActionEvent event) {
+		calc.insertar('0');
+	}
+
+	@FXML
+	void onActioncincoButton(ActionEvent event) {
+		calc.insertar('5');
+	}
+
+	@FXML
+	void onActioncomaButton(ActionEvent event) {
+		calc.insertarComa();
+	}
+
+	@FXML
+	void onActioncuatroButton(ActionEvent event) {
+		calc.insertar('4');
+	}
+
+	@FXML
+	void onActiondivButton(ActionEvent event) {
+		calc.operar(Calculadora.DIVIDIR);
+	}
+
+	@FXML
+	void onActiondosButton(ActionEvent event) {
+		calc.insertar('2');
+	}
+
+	@FXML
+	void onActionmultipliqButton(ActionEvent event) {
+		calc.operar(Calculadora.MULTIPLICAR);
+	}
+
+	@FXML
+	void onActionnueveButton(ActionEvent event) {
+		calc.insertar('9');
+	}
+
+	@FXML
+	void onActionochoButton(ActionEvent event) {
+		calc.insertar('8');
+	}
+	
+	@FXML
+	void onActionrestaButton(ActionEvent event) {
+		calc.operar(Calculadora.RESTAR);
+	}
+
+	@FXML
+	void onActionresultButton(ActionEvent event) {
+		calc.operar(Calculadora.IGUAL);
+	}
+
+	@FXML
+	void onActionseisButton(ActionEvent event) {
+		calc.insertar('6');
+	}
+
+	@FXML
+	void onActionsieteButton(ActionEvent event) {
+		calc.insertar('7');
+	}
+
+	@FXML
+	void onActionsumaButton(ActionEvent event) {
+		calc.operar(Calculadora.SUMAR);
+	}
+
+	@FXML
+	void onActiontresButton(ActionEvent event) {
+		calc.insertar('3');
+	}
+
+	@FXML
+	void onActionunoButton(ActionEvent event) {
+		calc.insertar('1');
 	}
 }
