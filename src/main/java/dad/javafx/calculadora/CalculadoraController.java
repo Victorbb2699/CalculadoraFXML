@@ -98,90 +98,110 @@ public class CalculadoraController implements Initializable {
 	@FXML
 	void onActioncButton(ActionEvent event) {
 		calc.borrar();
+		operacionesButton.setText(calc.getPantalla());
+		
 	}
 
 	@FXML
 	void onActionceButton(ActionEvent event) {
 		calc.borrarTodo();
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActionceroButton(ActionEvent event) {
 		calc.insertar('0');
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActioncincoButton(ActionEvent event) {
 		calc.insertar('5');
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActioncomaButton(ActionEvent event) {
 		calc.insertarComa();
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActioncuatroButton(ActionEvent event) {
 		calc.insertar('4');
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActiondivButton(ActionEvent event) {
 		calc.operar(Calculadora.DIVIDIR);
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActiondosButton(ActionEvent event) {
 		calc.insertar('2');
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActionmultipliqButton(ActionEvent event) {
 		calc.operar(Calculadora.MULTIPLICAR);
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActionnueveButton(ActionEvent event) {
 		calc.insertar('9');
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActionochoButton(ActionEvent event) {
 		calc.insertar('8');
+		operacionesButton.setText(calc.getPantalla());
 	}
 	
 	@FXML
 	void onActionrestaButton(ActionEvent event) {
 		calc.operar(Calculadora.RESTAR);
+		operacionesButton.setText(calc.getPantalla());
+		
 	}
 
 	@FXML
 	void onActionresultButton(ActionEvent event) {
 		calc.operar(Calculadora.IGUAL);
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActionseisButton(ActionEvent event) {
 		calc.insertar('6');
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActionsieteButton(ActionEvent event) {
 		calc.insertar('7');
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActionsumaButton(ActionEvent event) {
 		calc.operar(Calculadora.SUMAR);
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActiontresButton(ActionEvent event) {
 		calc.insertar('3');
+		operacionesButton.setText(calc.getPantalla());
 	}
 
 	@FXML
 	void onActionunoButton(ActionEvent event) {
 		calc.insertar('1');
+		operacionesButton.setText(calc.getPantalla());
 	}
 }
